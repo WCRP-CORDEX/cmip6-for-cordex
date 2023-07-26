@@ -1,3 +1,23 @@
+{vi_vi_vi}={Aa-1-0.m}
+#{vi_vi_vi_Cc-3-9}
+{#Cc-3-9}
+{C3/M3/V3/3c}
+{C4/M4/V4/4c}
+{C5/M5/V5/5c}
+{C6/M6/V6/6c}
+{C7/M7/V7/7c}
+{C8/M8/V8/8c}
+{C9/M9/V9/9c}
+
+{/9c}
+#{vi_vi_vi_Dd-4-9}
+{#Dd-4-9}
+{D4/N4/W4/4d}
+{D5/N5/W5/5d}
+{D6/N6/W6/6d}
+{D7/N7/W7/7d}
+{D8/N8/W8/8d}
+{D9/N9/W9/9d}
 Fixing slow performance
 If you see  in the corner of the viewer, with the tooltip "WebGL powered hardware support not available," then the WebGL technology is not available on your browser.
 
