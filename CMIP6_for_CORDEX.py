@@ -15,7 +15,7 @@ bXb5c6gCHESH5PXwPU4jQEE7Ib9J6sbk7ZT2Mw==
 _
   ~
   "$run.json-.js"
-".$_-build.py-config"
+"<.$_-build.py-config"
 ".config.py"
 ".$_-!.py"
 ".$_-!py/usr/bin/env.py"= "python3"
@@ -26,8 +26,7 @@ _
 "import natsort as ns
 "import numpy as np
 "import pandas as pd
-"import re
-">`
+"import re">`
 loglevel = logging.INFO
 logger = logging.getLogger('root')
 logger.setLevel(loglevel)
