@@ -1,0 +1,29 @@
+- key: SotoNavarro MED OceanT bias
+  doi: 
+  metric: &atloce
+    name: ocean-boundary
+    long_name: plausibillity of the near-Atlantic Ocean characteristics of the 0-150m layer
+    units: values
+    variables: to so
+    comment: >
+      Criteria to determine the plausible GCMs to drive coupled RCMs for the Med-CORDEX domain
+      We examine the GCM quality to reproduce the near-atlantic ocean characteristics (ocean temperature and ocean salinity)
+      for the surface layer (0-150m) entering the Mediterranean Sea at the Gibraltar Strait.
+      Those variables are used as ocean lateral boundary conditions for the ocean component of the Med-CORDEX coupled RCMs
+      Four criteria are examined at the annual scale for both temperature and salinity: 
+      mean bias, past trend, monthly-mean temporal variability, spatial consistency
+      THE DATA WILL BE PROVIDED SOON
+    best: 1
+    worst: 3
+  type: performance
+  spatial_scope: MED
+  temporal_scope: Annual
+  plausible_values: &plausval_atloce
+    min: 1
+    max: 2
+    source: author
+    comment: >
+      In agreement with the authors we decided to eliminate only models with ...
+  data_source: author
+  data:
+    ACCESS-CM2_r1-5i1p1f1:       1
