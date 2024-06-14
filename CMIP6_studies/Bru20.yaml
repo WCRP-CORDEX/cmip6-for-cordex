@@ -24,6 +24,8 @@
       not ACCESS-ESM1-5. This was confirmed as ok by the Australian group.
       Also the two FGOALS model are not belonging to the same family with this
       criteria.
+      TaiESM1 is not evaluated by Brunner et al. 2020. However it is published that TaiESM1 belongs to the CESM2 family
+      (Lee et al. 2020, https://gmd.copernicus.org/articles/13/3887/2020/, The development of TaiESM is based on CESM1.2.2, in which the ocean, sea ice, and river components, as well as the infrastructure of the model, remain unchanged.) 
   type: other
   spatial_scope: Global
   period:
@@ -62,7 +64,8 @@
     MPI-ESM1-2-LR_r1-10i1p1f1: MPI    
 #    MRI-ESM2-0_r1i1p1f1:     
 #    NESM3_r1-2i1p1f1:                  
-    NorESM2-MM_r1i1p1f1: CESM     
+    NorESM2-MM_r1i1p1f1: CESM
+    TaiESM1_r1i1p1f1: CESM
     UKESM1-0-LL_r1-19i1p1f2: HadGEM            
 
 - key: Bru20 perf
