@@ -68,6 +68,14 @@ tables_filter:
     - filter_avail
     - filter_plausible
     - filter_selected
+    - filter_all
+
+show_single_member:
+  #
+  # Whether to show a single member in the summary tables
+  #
+  default: yes
+  MED: no
 
 preferred: # Not implemented
   plausible_values_source: eurocordex_gcm_selection_team

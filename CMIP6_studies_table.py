@@ -33,6 +33,10 @@ synthesis = synthesis_sum_failures
 with open('CMIP6_studies_config.yaml') as fp:
   config = yaml.load(fp, Loader=yaml.FullLoader)
 
+def get_from_config(config, label, domain):
+  '''Get configuration option for domain considering the default value'''
+  return(config[label].get(domain, config[label]['default']))
+
 alldata = ys.load_from_files('CMIP6_studies/*.yaml', skip_disabled = True, skip_disabled_domain = CORDEX_DOMAIN)
 # filter and sort
 alldata = [x for x in alldata if x.spatial_scope in config['spatial_scope_filter'][CORDEX_DOMAIN]]
@@ -83,7 +87,7 @@ non_esgf = pd.read_csv('CMIP6_for_CORDEX_availability_non_ESGF.csv').set_index([
 tableavail.update(non_esgf)
 # - update synthesis column
 mandatory_scenarios = ['historical','ssp126', 'ssp370']
-lbc_for_source_type = config['lbc_for_source_type'].get(CORDEX_DOMAIN, config['lbc_for_source_type']['default'])
+lbc_for_source_type = get_from_config(config, 'lbc_for_source_type', CORDEX_DOMAIN)
 tableavail.loc[:,'synthesis'] = np.logical_and.reduce(
   tableavail.loc[:,mandatory_scenarios] == lbc_for_source_type, axis=1
 ) * 1
@@ -211,9 +215,14 @@ selected = plans[plans['domain'].str.startswith(CORDEX_DOMAIN)]
 filter_selected = filter_all.copy()
 filter_selected.iloc[:] = filter_selected.index.isin(set(zip(selected['driving_model'],selected['ensemble'])))
 filters['filter_selected'] = filter_selected
-# Convert some filters to show a single member
-for filtname in ['filter_avail', 'filter_avail_and_plausible', 'filter_plausible']:
-  filters[filtname] = single_member(filters[filtname])
+show_single_member = get_from_config(config, 'show_single_member', CORDEX_DOMAIN)
+if show_single_member == 'yes':
+  # Convert some filters to show a single member
+  single_member_in_title = ' (single member)'
+  for filtname in ['filter_avail', 'filter_avail_and_plausible', 'filter_plausible']:
+    filters[filtname] = single_member(filters[filtname])
+else:
+  single_member_in_title = ''
 pd.set_option('precision', 2)
 format_dict = { # Format exceptions
                          ('2. Plausibility', 'Nabat EUR AOD hist trend'): '{:.3f}',
@@ -264,17 +273,17 @@ The values for simulations showing some unplausible performace metric are also g
 filter_metadata = {
   'filter_avail_and_plausible': dict(
     id='avail-and-plausible',
-    header='Filter: available and plausible (single member)',
+    header='Filter: available and plausible' + single_member_in_title,
     text=''
   ), 
   'filter_avail': dict(
     id='avail',
-    header='Filter: available (single member)',
+    header='Filter: available' + single_member_in_title,
     text=''
   ),
   'filter_plausible': dict(
     id='plausible',
-    header='Filter: plausible (single member)',
+    header='Filter: plausible' + single_member_in_title,
     text=''
   ),
   'filter_selected': dict(
@@ -288,7 +297,7 @@ filter_metadata = {
     text=''
   )
 }
-domain_filters = config['tables_filter'].get(CORDEX_DOMAIN, config['tables_filter']['default'])
+domain_filters = get_from_config(config, 'tables_filter', CORDEX_DOMAIN)
 f.write('\n'.join([f'\n<li><a href="#{filter_metadata[filtname]["id"]}">{filter_metadata[filtname]["header"]}</a></li>' for filtname in domain_filters]))
 f.write('</ul>')
 for filtname in domain_filters:

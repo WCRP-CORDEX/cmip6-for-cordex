@@ -1153,6 +1153,45 @@ Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
 
 ```
 
+#### SotoNavarro MED OceanT bias
+
+Located in [CMIP6_studies/SotoNavarro.yaml](../CMIP6_studies/SotoNavarro.yaml)
+
+None
+
+```
+- key: SotoNavarro MED OceanT bias
+  doi: None
+  type: performance
+  spatial_scope: MED
+  temporal_scope: Annual
+  data_source: author
+  metric:
+    name: ocean-boundary
+    long_name: plausibillity of the near-Atlantic Ocean characteristics of the 0-150m layer
+    units: values
+    variables: to so
+    comment:
+      Criteria to determine the plausible GCMs to drive coupled RCMs for the
+      Med-CORDEX domain We examine the GCM quality to reproduce the near-
+      atlantic ocean characteristics (ocean temperature and ocean salinity) for
+      the surface layer (0-150m) entering the Mediterranean Sea at the Gibraltar
+      Strait. Those variables are used as ocean lateral boundary conditions for
+      the ocean component of the Med-CORDEX coupled RCMs Four criteria are
+      examined at the annual scale for both temperature and salinity:  mean
+      bias, past trend, monthly-mean temporal variability, spatial consistency
+      THE DATA WILL BE PROVIDED SOON
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with ...
+
+```
+
 #### Dobler SST rmse SNA
 
 Located in [CMIP6_studies/Dobler.yaml](../CMIP6_studies/Dobler.yaml)
@@ -1682,7 +1721,12 @@ Located in [CMIP6_studies/Bru20.yaml](../CMIP6_studies/Bru20.yaml)
       the family. This leads to some surprise such as  Strangely, ACCESS-CM2 is
       in the same family as UKESM and HadGEM3, but not ACCESS-ESM1-5. This was
       confirmed as ok by the Australian group. Also the two FGOALS model are not
-      belonging to the same family with this criteria.
+      belonging to the same family with this criteria. TaiESM1 is not evaluated
+      by Brunner et al. 2020. However it is published that TaiESM1 belongs to
+      the CESM2 family (Lee et al. 2020,
+      https://gmd.copernicus.org/articles/13/3887/2020/, The development of
+      TaiESM is based on CESM1.2.2, in which the ocean, sea ice, and river
+      components, as well as the infrastructure of the model, remain unchanged.)
   period:
     reference: 1980-2014
 
