@@ -75,7 +75,7 @@ show_single_member:
   # Whether to show a single member in the summary tables
   #
   default: yes
-  MED: no
+  MED: yes
 
 preferred: # Not implemented
   plausible_values_source: eurocordex_gcm_selection_team

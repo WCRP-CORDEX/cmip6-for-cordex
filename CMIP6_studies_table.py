@@ -6,6 +6,7 @@ import seaborn as sns
 import sys
 import YamlStudies as ys
 import yaml
+from icecream import ic
 
 CORDEX_DOMAIN = sys.argv[1]
 
@@ -216,7 +217,7 @@ filter_selected = filter_all.copy()
 filter_selected.iloc[:] = filter_selected.index.isin(set(zip(selected['driving_model'],selected['ensemble'])))
 filters['filter_selected'] = filter_selected
 show_single_member = get_from_config(config, 'show_single_member', CORDEX_DOMAIN)
-if show_single_member == 'yes':
+if show_single_member:
   # Convert some filters to show a single member
   single_member_in_title = ' (single member)'
   for filtname in ['filter_avail', 'filter_avail_and_plausible', 'filter_plausible']:
