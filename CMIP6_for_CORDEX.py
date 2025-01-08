@@ -91,7 +91,7 @@ def aggfun(x):
 #
 conn = SearchConnection('http://esgf-data.dkrz.de/esg-search', distrib=True)
 logging.getLogger('pyesgf.search.connection').setLevel(loglevel)
-df = pd.DataFrame()
+dflist = []
 for context in contexts.keys():
   logger.info(f'Retrieving {context} variables ...')
   ctx = conn.new_context(**contexts[context])
@@ -99,7 +99,8 @@ for context in contexts.keys():
   open('CMIP6_for_CORDEX__%s.txt' % context, 'w').writelines([did+'\n' for did in sorted(dids)])
   datanode_part = re.compile('\|.*$')
   dataset_ids = [datanode_part.sub('', did).split('.') for did in dids]
-  df = df.append(pd.DataFrame(dataset_ids))
+  dflist.append(pd.DataFrame(dataset_ids))
+df = pd.concat(dflist)
 
 df.columns = facets
 df['modelrun'] = df[['model','run']].apply(lambda x: '_'.join(x), axis = 1)

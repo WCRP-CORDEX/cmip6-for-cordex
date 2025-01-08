@@ -2,6 +2,7 @@ import datetime
 import natsort as ns
 import numpy as np
 import pandas as pd
+from icecream import ic
 
 rcm_source_types = ['ARCM', 'AORCM']
 
@@ -10,21 +11,20 @@ non_esgf = pd.read_csv('CMIP6_for_CORDEX_availability_non_ESGF.csv').set_index([
 tableavail.update(non_esgf)
 # - update synthesis column
 mandatory_scenarios = ['historical','ssp126', 'ssp370']
-tableavail.loc[:,'synthesis'] = np.logical_and.reduce(
-  tableavail.loc[:,mandatory_scenarios].isin(rcm_source_types), axis=1
-) * 1
-tableavail.loc[:,'synthesis'] = tableavail.loc[:,'synthesis'].astype(int).replace(
-  {0: '', 1: '1'}
+tableavail['synthesis'] = np.where(
+    np.logical_and.reduce(tableavail[mandatory_scenarios].isin(rcm_source_types), axis=1),
+    '1',  # if all mandatory scenarios are available
+    ''    # otherwise
 )
 # - filter out entries without 1 scenario
 availscenarios = ['ssp126', 'ssp245', 'ssp370', 'ssp585']
 tableavail_scen_filter = np.sum(tableavail.loc[:,availscenarios].isin(rcm_source_types), axis=1) >= 1
 tableavail_hist_filter = tableavail.loc[:,'historical'].isin(rcm_source_types)
-row_filter = set(
+row_filter = list(set(
     tableavail.index[tableavail_scen_filter]
   ).intersection(
     tableavail.index[tableavail_hist_filter]
-  )
+  ))
 tableavail = tableavail.loc[row_filter]
 tableavail = tableavail.reindex(ns.natsorted(tableavail.index))
 
@@ -32,11 +32,11 @@ csvout = 'docs/CMIP6_for_CORDEX_availability_RCM.csv'
 tableavail.to_csv(csvout, float_format = '%.2f', index_label = ['model', 'run'])
 
 def greyout_non_rcm(df):
-  attr = 'color: grey'
-# Bug in pandas https://github.com/pandas-dev/pandas/issues/35429
-#  return(df.where(df.isin(rcm_source_types), attr))
-  rval = df.copy()
-  rval.iloc[:] = np.where((rval.isin(rcm_source_types)|(rval == '1')).fillna(False), rval, attr)
+  attr = 'color: grey;'
+  rval = pd.DataFrame('', index=df.index, columns=df.columns)
+  mask = (df.isin(rcm_source_types) | (df == '1')).fillna(False)
+  rval[~mask] = attr
+  ic(rval)
   return(rval)
 
 d1 = dict(selector=".level0", props=[('min-width', '50px')])
@@ -78,13 +78,13 @@ See <a href="http://wcrp-cordex.github.io/cmip6-for-cordex">http://wrcp-cordex.g
 f.write(tableavail
     .convert_dtypes(convert_string = False, convert_boolean = False)
     .style
-      .set_properties(**{'font-size':'8pt', 'border':'1px lightgrey solid !important'})
+      .set_properties(**{'font-size':'8pt', 'border':'1px lightgrey solid'})
       .set_table_styles([d1,{
         'selector': 'th',
         'props': [('font-size', '8pt'),('border-style','solid'),('border-width','1px')]
       }])
       .apply(greyout_non_rcm, axis=None)
-      .render()
+      .to_html()
       .replace('nan','')
   )
 f.write('</body></html>')
