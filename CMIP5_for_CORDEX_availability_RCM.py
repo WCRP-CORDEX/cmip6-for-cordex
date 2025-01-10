@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from icecream import ic
 
-rcm_source_types = ['ARCM', 'AORCM']
+rcm_source_types = ['ARCM', 'AORCM', '3Dml']
 
 # Read input CSVs generated from CMIP5 processing
 tableavail = pd.read_csv('docs/CMIP5_for_CORDEX_availability_ESGF.csv').set_index(['model', 'run'])
@@ -75,7 +75,7 @@ The synthesis column indicates whether the CORDEX-CMIP5 protocol mandatory scena
 The table shows only those simulations with RCM (ARCM or AORCM) LBC available for some future scenario (plus historical).
 </p>
 <p style="font-size: smaller; text-align: justify;">
-See <a href="http://wcrp-cordex.github.io/cmip5-for-cordex">http://wcrp-cordex.github.io/cmip5-for-cordex</a> for details. A machine-readable (CSV) file version of this table is available <a href="https://github.com/wcrp-cordex/cmip5-for-cordex/blob/main/docs/CMIP5_for_CORDEX_availability_RCM.csv">here</a>.
+See <a href="http://wcrp-cordex.github.io/cmip6-for-cordex">http://wcrp-cordex.github.io/cmip6-for-cordex</a> for details. A machine-readable (CSV) file version of this table is available <a href="https://github.com/wcrp-cordex/cmip6-for-cordex/blob/main/docs/CMIP5_for_CORDEX_availability_RCM.csv">here</a>.
 </p>
 ''')
 f.write(tableavail
