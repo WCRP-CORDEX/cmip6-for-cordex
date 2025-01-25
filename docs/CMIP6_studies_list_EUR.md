@@ -1027,7 +1027,7 @@ Located in [CMIP6_studies/AR6.yaml](../CMIP6_studies/AR6.yaml)
 
 None
 
-```
+```yaml
 - key: AR6 TCR as spread
   doi: None
   type: future_spread
