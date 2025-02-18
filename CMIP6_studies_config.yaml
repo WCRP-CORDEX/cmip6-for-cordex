@@ -39,6 +39,11 @@ spatial_scope_filter:
     - BLK # Black Sea
     - special
 
+  NAM:
+    - Global
+    - NH
+    - special
+
   SEA:
     - Global
     - Tropics

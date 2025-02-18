@@ -10,7 +10,7 @@ update-esgf:
 	python3 CMIP6_for_CORDEX.py
 	python3 CMIP6_for_CORDEX_availability_RCM.py
 
-update-tables: AUS EUR MED SEA
+update-tables: AUS EUR MED NAM SEA
 
 AUS: CMIP6_downscaling_plans.csv
 	python3 CMIP6_studies_table.py AUS
@@ -23,6 +23,10 @@ MED: CMIP6_downscaling_plans.csv
 	python3 CMIP6_studies_table.py MED
 	python3 util/row_tooltips.py MED
 	python3 CMIP6_studies_list.py MED > docs/CMIP6_studies_list_MED.md
+NAM: CMIP6_downscaling_plans.csv
+	python3 CMIP6_studies_table.py NAM
+	python3 util/row_tooltips.py NAM
+	python3 CMIP6_studies_list.py NAM > docs/CMIP6_studies_list_NAM.md
 SEA: CMIP6_downscaling_plans.csv
 	python3 CMIP6_studies_table.py SEA
 	python3 CMIP6_studies_list.py SEA > docs/CMIP6_studies_list_SEA.md

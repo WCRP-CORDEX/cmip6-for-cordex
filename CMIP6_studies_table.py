@@ -9,6 +9,7 @@ import yaml
 from icecream import ic
 
 CORDEX_DOMAIN = sys.argv[1]
+rcm_source_types = ['ARCM', 'AORCM']
 
 def synthesis_sum_failures(binvalues, test = False):
   if test:
@@ -90,18 +91,18 @@ tableavail.update(non_esgf)
 mandatory_scenarios = ['historical','ssp126', 'ssp370']
 lbc_for_source_type = get_from_config(config, 'lbc_for_source_type', CORDEX_DOMAIN)
 tableavail.loc[:,'synthesis'] = np.logical_and.reduce(
-  tableavail.loc[:,mandatory_scenarios] == lbc_for_source_type, axis=1
+  tableavail.loc[:,mandatory_scenarios].isin(rcm_source_types), axis=1
 ) * 1
 tableavail.loc[:,'synthesis'] = tableavail.loc[:,'synthesis'].astype(int)
 # - filter out entries with less than 2 scenarios unless a metric is available for it
 availscenarios = ['ssp126', 'ssp245', 'ssp370', 'ssp585']
-tableavail_row_filter = np.sum(tableavail.loc[:,availscenarios] == lbc_for_source_type, axis=1) >= 2
+tableavail_row_filter = np.sum(tableavail.loc[:,availscenarios].isin(rcm_source_types), axis=1) >= 2
 row_filter = set(tableavail.index[tableavail_row_filter]).union(
   tableprange.index,
   tablespread.index,
   tableother.index
 ).intersection(tableavail.index)
-tableavail = tableavail.loc[row_filter]
+tableavail = tableavail.loc[list(row_filter)]
 
 # All together
 main_headers = ['1. Availability', '2. Plausibility', '3. Spread of future outcomes', '4. Other criteria']
@@ -138,7 +139,7 @@ def greyout_non_rcm(df):
 # Bug in pandas https://github.com/pandas-dev/pandas/issues/35429
 #  return(df.where(df == 'RCM', attr))
   rval = df.copy()
-  rval.iloc[:] = np.where((rval == lbc_for_source_type).fillna(False), rval, attr)
+  rval.iloc[:] = np.where(rval.isin(rcm_source_types).fillna(False), '', attr)
   return(rval)
 
 def greyout_unplausible(df):
@@ -224,11 +225,15 @@ if show_single_member:
     filters[filtname] = single_member(filters[filtname])
 else:
   single_member_in_title = ''
-pd.set_option('precision', 2)
-format_dict = { # Format exceptions
+
+format_dict = {col: "{:.2f}" for col in tablefull.select_dtypes(include=['float64']).columns}
+format_dict.update({ # Format exceptions
+                                        ('1. Availability', 'synthesis'): '{:.0f}',
                          ('2. Plausibility', 'Nabat EUR AOD hist trend'): '{:.3f}',
+                                       ('2. Plausibility', 'Bru20 perf'): '{:.3f}',
   ('3. Spread of future outcomes', 'Nabat EUR AOD future change ssp585'): '{:.3f}'
-}
+})
+
 d1 = dict(selector=".level0", props=[('min-width', '150px')])
 f = open(f'docs/CMIP6_studies_table_{CORDEX_DOMAIN}.html','w')
 f.write(f'''<!DOCTYPE html>
@@ -301,6 +306,7 @@ filter_metadata = {
 domain_filters = get_from_config(config, 'tables_filter', CORDEX_DOMAIN)
 f.write('\n'.join([f'\n<li><a href="#{filter_metadata[filtname]["id"]}">{filter_metadata[filtname]["header"]}</a></li>' for filtname in domain_filters]))
 f.write('</ul>')
+
 for filtname in domain_filters:
   if ~filters[filtname].any(): # Skip empty tables
     continue
@@ -313,7 +319,7 @@ for filtname in domain_filters:
     .loc[filters[filtname]]
     .convert_dtypes(convert_string = False, convert_boolean = False)
     .style
-      .format(format_dict)
+      .format(format_dict, na_rep='')
       .set_properties(**{'font-size':'8pt', 'border':'1px lightgrey solid !important'})
       .set_table_styles([d1,{
         'selector': 'th',
@@ -324,7 +330,7 @@ for filtname in domain_filters:
       .apply(greyout_unplausible_rows, axis=0, subset=spreadcols+othercols)
       .apply(highligh_plausible_range, axis=0)
       .apply(color_classes, axis=0, subset=spreadcols)
-      .render()
+      .to_html()
       .replace('nan','')
   )
 f.write('</body></html>')

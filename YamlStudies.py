@@ -122,28 +122,28 @@ class MetricEntry:
             self.data.loc[model + '_r%(r)si%(i)sp%(p)sf%(f)s' % thisripf] = self.data.loc[key]
             modelmeanflag[model + '_r%(r)si%(i)sp%(p)sf%(f)s' % thisripf] = 1
           self.data.drop(index = key, inplace = True)
-    self.is_ens_mean = self.data.iloc[:,0].copy()
+    self.is_ens_mean = self.data.iloc[:,0].copy().astype(bool)
     self.is_ens_mean.iloc[:] = False
     self.is_ens_mean = self.is_ens_mean | (pd.DataFrame.from_dict(modelmeanflag, orient='index', columns=['is_ens_mean']) != 1)
   
   def get_class_data(self):
     if self.has_classes():
-      rval = self.data.copy()
+      rval = self.data.copy().astype("object")
       rval.iloc[:] = pd.cut(self.data.values.flat,
         self.classes[0]['limits'],
         labels=self.classes[0]['labels'],
         ordered = True # TODO: could be made False if 'colors' are passed (e.g. to have ['unplausible', 'medium','unplausible'])
-      )
+      ).to_numpy().reshape(rval.shape)#.astype("category")
     elif self.metric.units == 'categorical':
       rval = self.data.copy()
     else:
-      rval = self.data.copy()
+      rval = self.data.copy().astype("object")
       try:
         for icol in range(rval.shape[1]):
           rval.iloc[:,icol] = pd.qcut(rval.iloc[:,icol].values.flat,
             q=3, # terciles
             labels=[f'T{x}' for x in range(1,3+1)]
-          )
+          ).to_numpy().reshape(-1,1)#.astype("category")
       except ValueError:
         rval = self.data.copy()
     return(rval)
