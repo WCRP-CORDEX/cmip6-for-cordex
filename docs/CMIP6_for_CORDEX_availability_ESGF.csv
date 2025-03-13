@@ -352,6 +352,11 @@ E3SM-2-0,r18i1p1f1,0,Basic,,,,Basic,
 E3SM-2-0,r19i1p1f1,0,Basic,,,,Basic,
 E3SM-2-0,r20i1p1f1,0,Basic,,,,Basic,
 E3SM-2-0,r21i1p1f1,0,Basic,,,,Basic,
+E3SM-2-1,r1i1p1f1,0,Basic,,,,,
+E3SM-2-1,r2i1p1f1,0,Basic,,,,,
+E3SM-2-1,r3i1p1f1,0,Basic,,,,,
+E3SM-2-1,r4i1p1f1,0,Basic,,,,,
+E3SM-2-1,r5i1p1f1,0,Basic,,,,,
 EC-Earth3-AerChem,r1i1p1f1,0,Basic,,,,ESD,
 EC-Earth3-AerChem,r1i1p4f1,0,Basic,,,Basic,,
 EC-Earth3-AerChem,r3i1p1f1,0,Basic,,,,ESD,
@@ -367,6 +372,7 @@ EC-Earth3-CC,r11i1p1f1,0,-,,,-,,
 EC-Earth3-CC,r12i1p1f1,0,-,,,-,,
 EC-Earth3-CC,r13i1p1f1,0,-,,,-,,
 EC-Earth3-ESM-1,r5i1p1f1,0,Basic,,,,,
+EC-Earth3-HR,r1i1p1f1,0,Basic,,,Basic,,
 EC-Earth3-Veg-LR,r1i1p1f1,0,Basic,ESD,ESD,ESD,ESD,ESD
 EC-Earth3-Veg-LR,r2i1p1f1,0,Basic,ESD,ESD,ESD,ESD,ESD
 EC-Earth3-Veg-LR,r3i1p1f1,0,Basic,ESD,ESD,ESD,ESD,ESD
@@ -979,6 +985,7 @@ NorESM2-LM,r7i1p1f2,0,,,,Basic,,
 NorESM2-LM,r8i1p1f2,0,,,,Basic,,
 NorESM2-LM,r9i1p1f2,0,,,,Basic,,
 NorESM2-LM,r10i1p1f2,0,,,,Basic,,
+NorESM2-LM,r11i1p1f1,0,,,,,,AORCM
 NorESM2-MM,r1i1p1f1,0,AORCM,,AORCM,3Dml,AORCM,AORCM
 NorESM2-MM,r2i1p1f1,0,3Dml,,,3Dml,,
 NorESM2-MM,r3i1p1f1,0,3Dml,,,,,

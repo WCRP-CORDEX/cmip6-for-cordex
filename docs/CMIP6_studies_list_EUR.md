@@ -1,17 +1,11 @@
 ## Incomplete entries
 
- * [Mindlin21 tropampl](CMIP6_studies/Mindlin2021.yaml)
  * [Fas20](CMIP6_studies/Fas20.yaml)
- * [Cob21](CMIP6_studies/Cob21.yaml)
  * [Beo21](CMIP6_studies/Beo21.yaml)
+ * [Cob21](CMIP6_studies/Cob21.yaml)
 ## Globally disabled entries
 
- · [Rib21 Constrained TCR](CMIP6_studies/Rib21.yaml)
- · [Dobler SICE rmse BNS](CMIP6_studies/Dobler.yaml)
- · [Dobler SICE rmse NAtl](CMIP6_studies/Dobler.yaml)
- · [Dobler SST rmse NAtl](CMIP6_studies/Dobler.yaml)
- · [Dobler SST rmse MED](CMIP6_studies/Dobler.yaml)
- · [Mindlin21 tropampl](CMIP6_studies/Mindlin2021.yaml)
+ · [Fer21 Lamb TPMS](CMIP6_studies/Fer21.yaml)
  · [Atlas Dtas WCE DJF](CMIP6_studies/AtlasIPCC.yaml)
  · [Atlas Dtas world DJF](CMIP6_studies/AtlasIPCC.yaml)
  · [Atlas Dtas world JJA](CMIP6_studies/AtlasIPCC.yaml)
@@ -21,18 +15,23 @@
  · [Atlas Dpr NEU JJA](CMIP6_studies/AtlasIPCC.yaml)
  · [Atlas Dpr WCE JJA](CMIP6_studies/AtlasIPCC.yaml)
  · [Atlas Dpr world JJA](CMIP6_studies/AtlasIPCC.yaml)
+ · [Tok20 Constrained TCR](CMIP6_studies/Tok20.yaml)
  · [Can20 marle](CMIP6_studies/Can20.yaml)
+ · [Fas20](CMIP6_studies/Fas20.yaml)
  · [Pri20 storm track DJF](CMIP6_studies/Pri20.yaml)
  · [Pri20 storm track JJA](CMIP6_studies/Pri20.yaml)
- · [Tok20 Constrained TCR](CMIP6_studies/Tok20.yaml)
- · [Fer21 Lamb TPMS](CMIP6_studies/Fer21.yaml)
- · [Fas20](CMIP6_studies/Fas20.yaml)
- · [Cob21](CMIP6_studies/Cob21.yaml)
  · [Beo21](CMIP6_studies/Beo21.yaml)
+ · [Rib21 Constrained TCR](CMIP6_studies/Rib21.yaml)
+ · [Cob21](CMIP6_studies/Cob21.yaml)
+ · [Dobler SICE rmse BNS](CMIP6_studies/Dobler.yaml)
+ · [Dobler SICE rmse NAtl](CMIP6_studies/Dobler.yaml)
+ · [Dobler SST rmse NAtl](CMIP6_studies/Dobler.yaml)
+ · [Dobler SST rmse MED](CMIP6_studies/Dobler.yaml)
 ## Entries disabled in EUR
 
  · [Atlas Dtas MED DJF](CMIP6_studies/AtlasIPCC.yaml)
  · [Atlas Dpr MED DJF](CMIP6_studies/AtlasIPCC.yaml)
+ · [Mindlin21 tropampl](CMIP6_studies/Mindlin2021.yaml)
 ## Available entries (EUR scope)
 ### Plausibility
 #### AR6 TCR
@@ -75,7 +74,7 @@ None
 
 Located in [CMIP6_studies/Bru20.yaml](../CMIP6_studies/Bru20.yaml)
 
-Lukas Brunner et al. (2020) Reduced global warming from CMIP6 projections when weighting models by performance and independence, https://doi.org/10.5194%2Fesd-11-995-2020
+10.5194/esd-11-995-2020
 
 ```
 - key: Bru20 perf
@@ -154,7 +153,7 @@ Located in [CMIP6_studies/Dalelane.yaml](../CMIP6_studies/Dalelane.yaml)
 
 Located in [CMIP6_studies/Qasmi.yaml](../CMIP6_studies/Qasmi.yaml)
 
-Aur\'elien Ribes et al. (2021) Making climate projections conditional on historical observations, https://doi.org/10.1126%2Fsciadv.abc0671
+10.1126/sciadv.abc0671
 
 ```
 - key: Qasmi Constr Global Dtas ssp245 2050
@@ -170,8 +169,9 @@ Aur\'elien Ribes et al. (2021) Making climate projections conditional on histori
     variables: tas
     comment:
       Constrained global annual temperature future climate change range,
-      2041-2060 vs 1850-1900, SSP245 (adapted from Ribes et al. 2021 by S.
-      Qasmi). In particular by adding recently available CMIP6 GCM, now 40 GCMs.
+      2041-2060 vs 1850-1900, SSP245 (adapted from Ribes et al. 2021, Science
+      Advances by S. Qasmi). In particular by adding recently available CMIP6
+      GCM, now 40 GCMs.
   period:
     reference: 1850-1900
     target: 2041-2060
@@ -193,7 +193,7 @@ Aur\'elien Ribes et al. (2021) Making climate projections conditional on histori
 
 Located in [CMIP6_studies/Bra21.yaml](../CMIP6_studies/Bra21.yaml)
 
-Swen Brands et al. (2021) A circulation-based performance atlas of the CMIP5 and 6 models, https://doi.org/10.5194%2Fgmd-2020-418
+10.5194/gmd-2020-418
 
 ```
 - key: Bra21 Lamb EUR
@@ -238,7 +238,7 @@ Swen Brands et al. (2021) A circulation-based performance atlas of the CMIP5 and
 
 Located in [CMIP6_studies/Div20.yaml](../CMIP6_studies/Div20.yaml)
 
-Paolo Davini et al. (2020) From CMIP3 to CMIP6: Northern Hemisphere Atmospheric Blocking Simulation in Present and Future Climate, https://doi.org/10.1175%2Fjcli-d-19-0862.1
+10.1175/JCLI-D-19-0862.1
 
 ```
 - key: Dav20 blocking freq DJF
@@ -291,7 +291,7 @@ Paolo Davini et al. (2020) From CMIP3 to CMIP6: Northern Hemisphere Atmospheric 
 
 Located in [CMIP6_studies/Div20.yaml](../CMIP6_studies/Div20.yaml)
 
-Paolo Davini et al. (2020) From CMIP3 to CMIP6: Northern Hemisphere Atmospheric Blocking Simulation in Present and Future Climate, https://doi.org/10.1175%2Fjcli-d-19-0862.1
+10.1175/JCLI-D-19-0862.1
 
 ```
 - key: Dav20 blocking freq JJA
@@ -393,7 +393,7 @@ Located in [CMIP6_studies/Dobler.yaml](../CMIP6_studies/Dobler.yaml)
 
 Located in [CMIP6_studies/McSw15.yaml](../CMIP6_studies/McSw15.yaml)
 
-C. F. McSweeney et al. (2014) Selecting CMIP5 GCMs for downscaling over multiple regions, https://doi.org/10.1007%2Fs00382-014-2418-8
+10.1007/s00382-014-2418-8
 
 ```
 - key: McSw15 circ DJF
@@ -440,7 +440,7 @@ C. F. McSweeney et al. (2014) Selecting CMIP5 GCMs for downscaling over multiple
 
 Located in [CMIP6_studies/McSw15.yaml](../CMIP6_studies/McSw15.yaml)
 
-C. F. McSweeney et al. (2014) Selecting CMIP5 GCMs for downscaling over multiple regions, https://doi.org/10.1007%2Fs00382-014-2418-8
+10.1007/s00382-014-2418-8
 
 ```
 - key: McSw15 circ JJA
@@ -561,7 +561,7 @@ Located in [CMIP6_studies/Nabat.yaml](../CMIP6_studies/Nabat.yaml)
 
 Located in [CMIP6_studies/Oud20.yaml](../CMIP6_studies/Oud20.yaml)
 
-Thomas Oudar et al. (2020) Drivers of the Northern Extratropical Eddy-Driven Jet Change in CMIP5 and CMIP6 Models, https://doi.org/10.1029%2F2019gl086695
+10.1029/2019GL086695
 
 ```
 - key: Oud20 jetpos
@@ -591,11 +591,403 @@ Thomas Oudar et al. (2020) Drivers of the Northern Extratropical Eddy-Driven Jet
 
 ```
 
+#### Palmer23 EUR Circ DJF
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 EUR Circ DJF
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: EUR
+  temporal_scope: DJF
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 EUR Circ JJA
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 EUR Circ JJA
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: EUR
+  temporal_scope: JJA
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 EUR Blocking DJFM
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 EUR Blocking DJFM
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: EUR
+  temporal_scope: DJFM
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 EUR Blocking JJAS
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 EUR Blocking JJAS
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: EUR
+  temporal_scope: JJAS
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 EUR Storm Track DJF
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 EUR Storm Track DJF
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: EUR
+  temporal_scope: DJF
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 EUR Storm Track JJA
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 EUR Storm Track JJA
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: EUR
+  temporal_scope: JJA
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 EUR AMOC
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 EUR AMOC
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: EUR
+  temporal_scope: Annual
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
 #### Pri20 storm track
 
 Located in [CMIP6_studies/Pri20.yaml](../CMIP6_studies/Pri20.yaml)
 
-Matthew D. K. Priestley et al. (2020) An Overview of the Extratropical Storm Tracks in CMIP6 Historical Simulations, https://doi.org/10.1175%2Fjcli-d-19-0928.1
+10.1175/JCLI-D-19-0928.1
 
 ```
 - key: Pri20 storm track
@@ -687,6 +1079,230 @@ Located in [CMIP6_studies/Winderlich.yaml](../CMIP6_studies/Winderlich.yaml)
 
 ```
 
+#### Palmer23 MED tas DJF
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 MED tas DJF
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: MED
+  temporal_scope: DJF
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 MED tas JJA
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 MED tas JJA
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: MED
+  temporal_scope: JJA
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 MED Storm Track DJF
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 MED Storm Track DJF
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: MED
+  temporal_scope: DJF
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
+#### Palmer23 MED Storm Track JJA
+
+Located in [CMIP6_studies/Palmer23.yaml](../CMIP6_studies/Palmer23.yaml)
+
+10.5194/esd-14-457-2023
+
+```
+- key: Palmer23 MED Storm Track JJA
+  doi: 10.5194/esd-14-457-2023
+  type: performance
+  spatial_scope: MED
+  temporal_scope: JJA
+  data_source: author
+  metric:
+    name: circulation
+    long_name: plausibillity of the large scale atmospherc circulation pattern for Europe
+    units: categorical
+    variables: ua850 va850
+    comment:
+      Qualitative large scale circulation pattern score based on overall
+      pattern, bias and RMSE. Based on 20 year climatology comparison with ERA5
+      1995-2014. criteria is an updated on the work by McSweeney et al. 2015 but
+      for CMIP6 Based on the method of qualitative scoring in McSweeney et al.
+      (2015) and adapted for CMIP6.  THE TEXT OF THE COMMENTS HAS TO BE ADAPTED
+      TO EACH SCORES EXTRACTED FROM Palmer et al. 2013 The scoring has been
+      changed from the traffic light coding in the paper to numbers here 1
+      (white)  - Satisfactory. It gathers two categories: Low errors over both
+      local and remote regions and Some substantial errors present but not
+      widespread or not present in the local region of interest.
+      Location of larger remote errors are not known to have a downstream impact
+      in the local region of interest. Captures key characteristics of the
+      criteria spatially or temporarily. 2 (orange) - Unsatisfactory,
+      substantial errors in remote regions where downstream effects could be
+      expected to impact on the reliability of regional information and/or
+      present in the local region of interest. 3 (red)    - Inadequate. Large
+      widespread errors to the extent that the model is unable to represent the
+      present-day climatology in a useful way and future projections by the
+      model cannot be interpreted in a meaningful way.   (grey)   - Data/
+      analysis not available for a given model. This category ha sno number here
+      The authors use only the first realisation for each of the models in this
+      assessment and assume that this is generally representative of the model
+      performance. In first approximation, we consider HERE that the computed
+      score for the r1 member can be applied to any model member with the same
+      physics (p) and same forcing (f).
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with the
+      Red flag (Inadequate, value = 3)
+
+```
+
 #### Sevault MED SST
 
 Located in [CMIP6_studies/Sevault.yaml](../CMIP6_studies/Sevault.yaml)
@@ -725,6 +1341,45 @@ Located in [CMIP6_studies/Sevault.yaml](../CMIP6_studies/Sevault.yaml)
     source: author
     comment:
       The plausibility threshold is difficult to set.
+
+```
+
+#### SotoNavarro MED OceanT bias
+
+Located in [CMIP6_studies/SotoNavarro.yaml](../CMIP6_studies/SotoNavarro.yaml)
+
+None
+
+```
+- key: SotoNavarro MED OceanT bias
+  doi: None
+  type: performance
+  spatial_scope: MED
+  temporal_scope: Annual
+  data_source: author
+  metric:
+    name: ocean-boundary
+    long_name: plausibillity of the near-Atlantic Ocean characteristics of the 0-150m layer
+    units: values
+    variables: to so
+    comment:
+      Criteria to determine the plausible GCMs to drive coupled RCMs for the
+      Med-CORDEX domain We examine the GCM quality to reproduce the near-
+      atlantic ocean characteristics (ocean temperature and ocean salinity) for
+      the surface layer (0-150m) entering the Mediterranean Sea at the Gibraltar
+      Strait. Those variables are used as ocean lateral boundary conditions for
+      the ocean component of the Med-CORDEX coupled RCMs Four criteria are
+      examined at the annual scale for both temperature and salinity:  mean
+      bias, past trend, monthly-mean temporal variability, spatial consistency
+      THE DATA WILL BE PROVIDED SOON
+    best: 1
+    worst: 3
+  plausible_values:
+  - min: 1
+    max: 2
+    source: author
+    comment:
+      In agreement with the authors we decided to eliminate only models with ...
 
 ```
 
@@ -1027,7 +1682,7 @@ Located in [CMIP6_studies/AR6.yaml](../CMIP6_studies/AR6.yaml)
 
 None
 
-```yaml
+```
 - key: AR6 TCR as spread
   doi: None
   type: future_spread
@@ -1057,7 +1712,7 @@ None
 
 Located in [CMIP6_studies/Sch20.yaml](../CMIP6_studies/Sch20.yaml)
 
-Manuel Schlund et al. (2020) Emergent constraints on equilibrium climate  sensitivity in CMIP5: do they hold for CMIP6?, https://doi.org/10.5194%2Fesd-11-1233-2020
+10.5194/esd-11-1233-2020
 
 ```
 - key: Sch20 ECS
@@ -1116,7 +1771,7 @@ Located in [CMIP6_studies/Nabat.yaml](../CMIP6_studies/Nabat.yaml)
 
 Located in [CMIP6_studies/Oud20.yaml](../CMIP6_studies/Oud20.yaml)
 
-Thomas Oudar et al. (2020) Drivers of the Northern Extratropical Eddy-Driven Jet Change in CMIP5 and CMIP6 Models, https://doi.org/10.1029%2F2019gl086695
+10.1029/2019GL086695
 
 ```
 - key: Oud20 jetposdelta
@@ -1147,7 +1802,7 @@ Thomas Oudar et al. (2020) Drivers of the Northern Extratropical Eddy-Driven Jet
 
 Located in [CMIP6_studies/Qasmi.yaml](../CMIP6_studies/Qasmi.yaml)
 
-Saïd Qasmi et al. (2022) Reducing uncertainty in local temperature projections, https://doi.org/10.1126%2Fsciadv.abo6872
+10.1126/sciadv.abo6872
 
 ```
 - key: Qasmi Constr EUR Dtas ssp245 2050 JJA
@@ -1163,11 +1818,14 @@ Saïd Qasmi et al. (2022) Reducing uncertainty in local temperature projections,
     variables: tas
     comment:
       Regional tas change in Europe MED, NEU, CEU, MED+NEU+CEU, DJF, JJA,
-      2041-2060 vs 1850-1900, SSP245. Values are given only for land points.
-      Adapted from Qasmi and Ribes 2022, Sci. Adv. by S. Qasmi following S.
-      Somot's request Numerical values available soon. Only warming classes for
-      now. We report here only warming classes for JJA and for the joined
-      MED+NEU+CEU domain
+      2041-2060 vs 1850-1900, SSP245.  Warming classes are determined wrt an
+      observationally-constrained range for the future regional warming based on
+      Qasmi and Ribes 2022 Applied observationnal constraint here is a global
+      temperature constraint + a regional temperature constraint Adapted from
+      Qasmi and Ribes 2022, Sci. Adv. by S. Qasmi following S. Somot's request
+      The criteria applies to all members of a given GCM. Values are given only
+      for land points. We report here only warming classes for now. Numerical
+      values could come later.
   period:
     reference: 1850-1900
     target: 2041-2060
@@ -1176,17 +1834,62 @@ Saïd Qasmi et al. (2022) Reducing uncertainty in local temperature projections,
     labels: ['implausible cold', 'weak warming', 'medium warming', 'strong warming', 'implausible warm']
     source: author
     comment:
-      Warming classes are determined wrt an observationally-constrained range
-      for the future regional warming based on Ribes et al. 2021, Qasmi et al.
-      (in rev). The observational constraint is a global constraint on the GMST
-      but it allows to constraint the regional climate warming. The 90% interval
-      of future warming plausible range is [2.3 ; 3.3]degC The 50% interval of
-      future warming plausible range is [2.5 ; 3.0]degC The best estimate is a
-      warming of 2.8 degC Category definition (new since 5 jan 2022): Categories
-      1 and 5 are considered as implausible by S. Qasmi. Category 2, 3, 4 are
-      plausible. Class 1 is below the Q5 of the constrained range. Class 2 is
-      between Q5 and Q25 Class 3 is between Q25 and Q75 Class 4 is between Q75
-      and Q95 Class 5 is above Q95
+      The 90% interval of future warming plausible range is [2.21 ; 3.31]degC
+      The 50% interval of future warming plausible range is [2.55 ; 3.0]degC The
+      best estimate is a warming of 2.8 degC 5 jan 2022 -> changing category
+      definition and adding new GCMs Categories 1 and 5 are considered as
+      implausible by S. Qasmi. Category 2, 3, 4 are plausible. Class 1 is below
+      the Q5 of the constrained range -> implausible cold Class 2 is between Q5
+      and Q25 -> weak warming Class 3 is between Q25 and Q75 -> medium warming
+      Class 4 is between Q75 and Q95 -> strong warming Class 5 is above Q95 ->
+      implausible warm
+
+```
+
+#### Qasmi Constrained Europe Dtas ssp245 2050 DJF
+
+Located in [CMIP6_studies/Qasmi.yaml](../CMIP6_studies/Qasmi.yaml)
+
+10.1126/sciadv.abo6872
+
+```
+- key: Qasmi Constrained Europe Dtas ssp245 2050 DJF
+  doi: 10.1126/sciadv.abo6872
+  type: future_spread
+  spatial_scope: MED+NEU+CEU
+  temporal_scope: DJF
+  data_source: author
+  metric:
+    name: deltatas_class
+    long_name: Warming classes according to Observationally-constrained Summer European future surface air temperature change in 2041-2060 in Summer
+    units: categorical
+    variables: tas
+    comment:
+      Regional tas change in Europe MED, NEU, CEU, MED+NEU+CEU, DJF, JJA,
+      2041-2060 vs 1850-1900, SSP245.  Warming classes are determined wrt an
+      observationally-constrained range for the future regional warming based on
+      Qasmi and Ribes 2022 Applied observationnal constraint here is a global
+      temperature constraint + a regional temperature constraint Adapted from
+      Qasmi and Ribes 2022, Sci. Adv. by S. Qasmi following S. Somot's request
+      The criteria applies to all members of a given GCM. Values are given only
+      for land points. We report here only warming classes for now. Numerical
+      values could come later.
+  period:
+    reference: 1850-1900
+    target: 2041-2060
+  classes:
+  - limits: [0.5, 1.5, 2.5, 3.5, 4.5, 5.5]
+    labels: ['implausible cold', 'weak warming', 'medium warming', 'strong warming', 'implausible warm']
+    source: author
+    comment:
+      The 90% interval of future warming plausible range is [2.02 ; 3.32]degC
+      The 50% interval of future warming plausible range is [2.4 ; 2.95]degC The
+      best estimate is a warming of 2.67 degC 4 april 2022 -> add the DJF season
+      Categories 1 and 5 are considered as implausible by S. Qasmi. Category 2,
+      3, 4 are plausible. Class 1 is below the Q5 of the constrained range ->
+      implausible cold Class 2 is between Q5 and Q25 -> weak warming Class 3 is
+      between Q25 and Q75 -> medium warming Class 4 is between Q75 and Q95 ->
+      strong warming Class 5 is above Q95 -> implausible warm
 
 ```
 
@@ -1325,6 +2028,100 @@ Located in [CMIP6_studies/AtlasIPCC.yaml](../CMIP6_studies/AtlasIPCC.yaml)
 
 ```
 
+#### Qasmi Constrained Mediterranean Dtas ssp245 2050 JJA
+
+Located in [CMIP6_studies/Qasmi.yaml](../CMIP6_studies/Qasmi.yaml)
+
+10.1126/sciadv.abo6872
+
+```
+- key: Qasmi Constrained Mediterranean Dtas ssp245 2050 JJA
+  doi: 10.1126/sciadv.abo6872
+  type: future_spread
+  spatial_scope: MED
+  temporal_scope: JJA
+  data_source: author
+  metric:
+    name: deltatas_class
+    long_name: Warming classes according to Observationally-constrained Summer European future surface air temperature change in 2041-2060 in Summer
+    units: categorical
+    variables: tas
+    comment:
+      Regional tas change in Europe MED, NEU, CEU, MED+NEU+CEU, DJF, JJA,
+      2041-2060 vs 1850-1900, SSP245.  Warming classes are determined wrt an
+      observationally-constrained range for the future regional warming based on
+      Qasmi and Ribes 2022 Applied observationnal constraint here is a global
+      temperature constraint + a regional temperature constraint Adapted from
+      Qasmi and Ribes 2022, Sci. Adv. by S. Qasmi following S. Somot's request
+      The criteria applies to all members of a given GCM. Values are given only
+      for land points. We report here only warming classes for now. Numerical
+      values could come later.
+  period:
+    reference: 1850-1900
+    target: 2041-2060
+  classes:
+  - limits: [0.5, 1.5, 2.5, 3.5, 4.5, 5.5]
+    labels: ['implausible cold', 'weak warming', 'medium warming', 'strong warming', 'implausible warm']
+    source: author
+    comment:
+      The 90% interval of future warming plausible range is [2.55 ; 3.57]degC
+      The 50% interval of future warming plausible range is [XXX ; XXX]degC The
+      best estimate is a warming of 3.06 degC 13 may 2024 -> add the MED domain
+      Categories 1 and 5 are considered as implausible by S. Qasmi. Category 2,
+      3, 4 are plausible. Class 1 is below the Q5 of the constrained range ->
+      implausible cold Class 2 is between Q5 and Q25 -> weak warming Class 3 is
+      between Q25 and Q75 -> medium warming Class 4 is between Q75 and Q95 ->
+      strong warming Class 5 is above Q95 -> implausible warm
+
+```
+
+#### Qasmi Constrained Mediterranean Dtas ssp245 2050 DJF
+
+Located in [CMIP6_studies/Qasmi.yaml](../CMIP6_studies/Qasmi.yaml)
+
+10.1126/sciadv.abo6872
+
+```
+- key: Qasmi Constrained Mediterranean Dtas ssp245 2050 DJF
+  doi: 10.1126/sciadv.abo6872
+  type: future_spread
+  spatial_scope: MED
+  temporal_scope: DJF
+  data_source: author
+  metric:
+    name: deltatas_class
+    long_name: Warming classes according to Observationally-constrained Summer European future surface air temperature change in 2041-2060 in Summer
+    units: categorical
+    variables: tas
+    comment:
+      Regional tas change in Europe MED, NEU, CEU, MED+NEU+CEU, DJF, JJA,
+      2041-2060 vs 1850-1900, SSP245.  Warming classes are determined wrt an
+      observationally-constrained range for the future regional warming based on
+      Qasmi and Ribes 2022 Applied observationnal constraint here is a global
+      temperature constraint + a regional temperature constraint Adapted from
+      Qasmi and Ribes 2022, Sci. Adv. by S. Qasmi following S. Somot's request
+      The criteria applies to all members of a given GCM. Values are given only
+      for land points. We report here only warming classes for now. Numerical
+      values could come later.
+  period:
+    reference: 1850-1900
+    target: 2041-2060
+  classes:
+  - limits: [0.5, 1.5, 2.5, 3.5, 4.5, 5.5]
+    labels: ['implausible cold', 'weak warming', 'medium warming', 'strong warming', 'implausible warm']
+    source: author
+    comment:
+      The 90% interval of future warming plausible range is [1.47 ; 2.45]degC
+      The 50% interval of future warming plausible range is [XXX ; XXX]degC The
+      best estimate is a warming of 1.96 degC 13 may 2024 -> add the MED domain
+      Categories 1 and 5 are considered as implausible by S. Qasmi. Category 2,
+      3, 4 are plausible. Class 1 is below the Q5 of the constrained range ->
+      implausible cold Class 2 is between Q5 and Q25 -> weak warming Class 3 is
+      between Q25 and Q75 -> medium warming Class 4 is between Q75 and Q95 ->
+      strong warming Class 5 is above Q95 -> implausible warm
+
+```
+
 #### Sevault MED SST warming
 
 Located in [CMIP6_studies/Sevault.yaml](../CMIP6_studies/Sevault.yaml)
@@ -1363,7 +2160,7 @@ Located in [CMIP6_studies/Sevault.yaml](../CMIP6_studies/Sevault.yaml)
 
 Located in [CMIP6_studies/Bru20.yaml](../CMIP6_studies/Bru20.yaml)
 
-Lukas Brunner et al. (2020) Reduced global warming from CMIP6 projections when weighting models by performance and independence, https://doi.org/10.5194%2Fesd-11-995-2020
+10.5194/esd-11-995-2020
 
 ```
 - key: Bru20 mfamily
@@ -1391,7 +2188,12 @@ Lukas Brunner et al. (2020) Reduced global warming from CMIP6 projections when w
       the family. This leads to some surprise such as  Strangely, ACCESS-CM2 is
       in the same family as UKESM and HadGEM3, but not ACCESS-ESM1-5. This was
       confirmed as ok by the Australian group. Also the two FGOALS model are not
-      belonging to the same family with this criteria.
+      belonging to the same family with this criteria. TaiESM1 is not evaluated
+      by Brunner et al. 2020. However it is published that TaiESM1 belongs to
+      the CESM2 family (Lee et al. 2020,
+      https://gmd.copernicus.org/articles/13/3887/2020/, The development of
+      TaiESM is based on CESM1.2.2, in which the ocean, sea ice, and river
+      components, as well as the infrastructure of the model, remain unchanged.)
   period:
     reference: 1980-2014
 
@@ -1429,7 +2231,7 @@ Located in [CMIP6_studies/Aerosol.yaml](../CMIP6_studies/Aerosol.yaml)
 
 Located in [CMIP6_studies/Bra21.yaml](../CMIP6_studies/Bra21.yaml)
 
-Swen Brands et al. (2021) A circulation-based performance atlas of the CMIP5 and 6 models, https://doi.org/10.5194%2Fgmd-2020-418
+10.5194/gmd-2020-418
 
 ```
 - key: Bra21 complexity
