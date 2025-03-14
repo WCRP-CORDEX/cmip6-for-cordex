@@ -42,6 +42,7 @@ spatial_scope_filter:
   NAM:
     - Global
     - NH
+    - NAM
     - special
 
   SEA:
