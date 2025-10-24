@@ -213,9 +213,9 @@ filter_all = filters['filter_avail'].copy()
 filter_all.iloc[:] = True
 filters['filter_all'] = filter_all
 plans = pd.read_csv('CMIP6_downscaling_plans.csv')
-selected = plans[plans['domain'].str.startswith(CORDEX_DOMAIN)]
+selected = plans[plans['domain_id'].str.startswith(CORDEX_DOMAIN)]
 filter_selected = filter_all.copy()
-filter_selected.iloc[:] = filter_selected.index.isin(set(zip(selected['driving_model'],selected['ensemble'])))
+filter_selected.iloc[:] = filter_selected.index.isin(set(zip(selected['driving_source_id'],selected['driving_variant_label'])))
 filters['filter_selected'] = filter_selected
 show_single_member = get_from_config(config, 'show_single_member', CORDEX_DOMAIN)
 if show_single_member:
@@ -295,7 +295,7 @@ filter_metadata = {
   'filter_selected': dict(
     id='selected',
     header='Selected GCMs + institutional plans',
-    text='See institutional plans at <a href="https://github.com/WCRP-CORDEX/simulation-status/blob/main/CMIP6_downscaling_plans.csv" target="_blank">CMIP6_downscaling_plans.csv</a><br>'
+    text=f'See institutional plans at <a href="https://wcrp-cordex.github.io/simulation-status/CMIP6_downscaling_plans.html?search={CORDEX_DOMAIN}" target="_blank">https://wcrp-cordex.github.io/simulation-status</a><br>'
   ),
   'filter_all': dict(
     id='all',
