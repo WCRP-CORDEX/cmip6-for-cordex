@@ -1,0 +1,355 @@
+- key: Ouranos tas bias
+  doi: [in-house performance]
+  metric: &tasclim
+    name: tasclim
+    long_name: tas climatology vs ERA5 climatology
+    units: K
+    variables: tas
+    comment: >
+      We calculate the RMSE at each grid point over the selected the domain (relative to ERA5) for the period from 1981 to 2010 and then we do a spatial average.
+      All models and ERA5 are linearly interpolated on a regular 1°x1° grid.  
+      -----
+      Periods, domains can be changed in https://pavics.ouranos.ca/selection-de-modeles
+    best: 1.21
+    worst: 2.26
+  type: performance
+  spatial_scope: NAM-CORDEX
+  temporal_scope: Climatology
+  period:
+    reference: 1981-2010
+  plausible_values:
+    min: 0
+    max: +inf 
+    source: Ouranos
+    comment: > 
+      
+  data_source: author
+  data:
+    EC-Earth3-Veg: 1.21
+    CanESM5-1-EBC: 1.32
+    CESM2: 1.38
+    MPI-ESM1-2-HR: 1.41
+    IPSL-CM6A-LR: 1.45
+    CMCC-ESM2: 1.49
+    CNRM-ESM2-1: 1.523955
+    EC-Earth3: 1.55
+    CNRM-CM6-1:	1.60
+    NorESM2-MM:	1.61
+    NorESM2-LM:	1.62
+    TaiESM1: 1.63
+    CMCC-CM2-SR5: 1.65
+    ACCESS-CM2:	1.66
+    MPI-ESM1-2-LR: 1.67
+    ACCESS-ESM1-5: 1.68
+    CNRM-CM6-1-HR: 1.89
+    UKESM1-0-LL: 1.96
+    MIROC6:	2.04
+    CanESM5-1: 2.11
+    MIROC-ES2L:	2.26
+
+- key: Ouranos hu-850mb bias
+  doi: [in-house performance]
+  metric: &hu850clim
+    name: huclim-850hPa
+    long_name: Specific humidity at 850-mb climatology vs ERA5 climatology
+    units: kg/kg
+    variables: hu-850-mb
+    comment: >
+      We calculate the RMSE at each grid point over the selected the domain (relative to ERA5) for the period from 1981 to 2010 and then we do a spatial average.
+      All models and ERA5 are linearly interpolated on a regular 1°x1° grid.  
+      -----
+      Periods, domains can be changed in https://pavics.ouranos.ca/selection-de-modeles
+    best: 0.000274
+    worst: 0.000887
+  type: performance
+  spatial_scope: NAM-CORDEX
+  temporal_scope: Climatology
+  period:
+    reference: 1981-2010
+  plausible_values:
+    min: 0
+    max: +inf 
+    source: Ouranos_SAC
+    comment: > 
+      
+  data_source: authors
+  data:
+    CanESM5-1-EBC: 0.000274
+    UKESM1-0-LL: 0.000394
+    CNRM-CM6-1: 0.000427
+    CNRM-ESM2-1: 0.00043
+    ACCESS-CM2: 0.000433
+    NorESM2-MM: 0.000437
+    EC-Earth3-Veg: 0.000444
+    EC-Earth3: 0.000483
+    TaiESM1: 0.000489
+    MIROC6: 0.000508
+    CESM2: 0.000526
+    MIROC-ES2L:	0.000543
+    ACCESS-ESM1-5: 0.000551
+    MPI-ESM1-2-LR: 0.000589
+    MPI-ESM1-2-HR: 0.00061
+    CanESM5-1: 0.000622
+    CNRM-CM6-1-HR: 0.000641
+    CMCC-ESM2: 0.000674
+    CMCC-CM2-SR5: 0.000752
+    NorESM2-LM:	0.000792
+    IPSL-CM6A-LR: 0.000887
+
+- key: Ouranos pr bias
+  doi: [in-house performance]
+  metric: &prclim
+    name: prclim
+    long_name: Total precipitation climatology vs ERA5 climatology
+    units: mm/day
+    variables: pr
+    comment: >
+      We calculate the RMSE at each grid point over the selected the domain (relative to ERA5) for the period from 1981 to 2010 and then we do a spatial average.
+      All models and ERA5 are linearly interpolated on a regular 1°x1° grid.  
+      -----
+      Periods, domains can be changed in https://pavics.ouranos.ca/selection-de-modeles
+    best: 0.53
+    worst: 0.90
+  type: performance
+  spatial_scope: NAM-CORDEX
+  temporal_scope: Climatology
+  period:
+    reference: 1981-2010
+  plausible_values:
+    min: 0
+    max: +inf 
+    source: Ouranos_SAC
+    comment: > 
+      
+  data_source: authors
+  data:
+   CESM2: 0.530
+   UKESM1-0-LL:	0.546
+   NorESM2-MM: 0.567 
+   TaiESM1: 0.593
+   CNRM-CM6-1-HR: 0.603
+   ACCESS-CM2: 0.607
+   EC-Earth3-Veg: 0.612
+   CMCC-ESM2: 0.613
+   EC-Earth3: 0.621
+   CMCC-CM2-SR5: 0.641
+   MIROC6: 0.651
+   MPI-ESM1-2-HR: 0.673
+   CNRM-CM6-1: 0.682
+   ACCESS-ESM1-5: 0.687
+   CNRM-ESM2-1: 0.694
+   NorESM2-LM: 0.711 
+   IPSL-CM6A-LR: 0.748
+   CanESM5-1: 0.781
+   MIROC-ES2L: 0.788
+   MPI-ESM1-2-LR: 0.849
+   CanESM5-1-EBC: 0.900
+
+
+- key: Ouranos zg-500mb bias
+  doi: [in-house performance]
+  metric: &zg-500mbclim
+    name: zg500mbclim
+    long_name: 500-mb geopotential height climatology vs ERA5 climatology
+    units: m
+    variables: zg500
+    comment: >
+      We calculate the RMSE at each grid point over the selected the domain (relative to ERA5)
+      for the period from 1981 to 2010 and then we do a spatial average.
+      All models and ERA5 are linearly interpolated on a regular 1°x1° grid.
+      Metric to analyse bias of the general circulation.
+      -----
+      Periods, domains can be changed in https://pavics.ouranos.ca/selection-de-modeles
+    best: 6.6
+    worst: 62.8
+  type: performance
+  spatial_scope: NAM-CORDEX
+  temporal_scope: Climatology
+  period:
+    reference: 1981-2010
+  plausible_values:
+    min: 0
+    max: +inf  
+    source: Ouranos_SAC
+    comment: >
+    
+  data_source: authors
+  data: 
+   CanESM5-1-EBC: 6.6
+   EC-Earth3-Veg: 12.1 
+   UKESM1-0-LL: 14.2
+   EC-Earth3: 16.0
+   MPI-ESM1-2-HR: 16.2
+   MPI-ESM1-2-LR: 17.3
+   NorESM2-MM: 19.0
+   CanESM5-1: 19.7
+   ACCESS-CM2: 22.0
+   TaiESM1: 26.3
+   NorESM2-LM: 27.0
+   CESM2: 31.2
+   ACCESS-ESM1-5: 33.9
+   CMCC-ESM2: 34.3
+   MIROC6: 36.2
+   CNRM-ESM2-1: 39.4
+   CMCC-CM2-SR5: 39.7
+   CNRM-CM6-1: 50.2
+   IPSL-CM6A-LR: 51.3
+   MIROC-ES2L: 53.0
+   CNRM-CM6-1-HR: 61.8
+
+
+- key: Ouranos zg-500mb filtered variance bias
+  doi: [in-house performance]
+  metric: &zg-500mbvar
+    name: zg500mbvar
+    long_name: STD of band-pass (2–6 days) filtered on daily 500-mb geopotential height climatology vs ERA5 climatology
+    units: m²
+    variables: zg500var
+    comment: >
+      First a band-pass (2-6 days) filtered is applied on the daily 500-mb zg. 
+      Then, we calculate the RMSE at each grid point over the selected the domain (relative to ERA5)
+      for the period from 1981 to 2010 and then we do a spatial average. 
+      All models and ERA5 are linearly interpolated on a regular 1°x1° grid. Metric to analyse bias of the synoptic activity.
+      -----
+      Periods, domains can be changed in https://pavics.ouranos.ca/selection-de-modeles
+    best: 119
+    worst: 601
+  type: performance
+  spatial_scope: NAM-CORDEX
+  temporal_scope: Climatology
+  period:
+    reference: 1981-2010
+  plausible_values:
+    min: 0
+    max: +inf  
+    source: Ouranos_SAC
+    comment: >
+    
+  data_source: authors
+  data: 
+   CESM2: 119
+   NorESM2-MM: 120
+   EC-Earth3-Veg: 132
+   EC-Earth3: 143
+   CanESM5-1: 149
+   UKESM1-0-LL: 150
+   TaiESM1: 165
+   MPI-ESM1-2-HR: 165
+   CNRM-CM6-1-HR: 168
+   CMCC-ESM2: 183
+   ACCESS-ESM1-5: 186
+   MPI-ESM1-2-LR: 187
+   CMCC-CM2-SR5: 188
+   CanESM5-1-EBC: 202
+   NorESM2-LM: 213
+   IPSL-CM6A-LR: 221
+   ACCESS-CM2: 238
+   CNRM-ESM2-1: 260
+   CNRM-CM6-1: 284
+   MIROC6: 344
+   MIROC-ES2L: 601
+
+
+
+- key: Ouranos siconcMaxExt
+  doi: [in-house performance]
+  metric: &siconcMaxExt
+    name: siconcMaxExt
+    long_name: Sea Ice concentration biais for climatology of maximum annual extent of sea ice (models vs ERA5)
+    units: %
+    variables: siconc
+    comment: >
+      First, using monthly data, we find the month with maximum annual sea ice extent.  
+      Then, we calculate the RMSE at each grid point over the selected the domain (relative to ERA5)
+      for the period from 1981 to 2010 and then we do a spatial average. 
+      All models and ERA5 are linearly interpolated on a regular 1°x1° grid. 
+      -----
+      Periods, domains can be changed in https://pavics.ouranos.ca/selection-de-modeles
+    best: 0.033
+    worst: 0.207
+  type: performance
+  spatial_scope: Artic (40-90 latitude)
+  temporal_scope: Climatology
+  period:
+    reference: 1981-2010
+  plausible_values:
+    min: 0
+    max: 1  
+    source: Ouranos_SAC
+    comment: >
+    
+  data_source: authors
+  data: 
+   CanESM5-1-EBC: 0.033
+   CNRM-CM6-1: 0.084
+   MPI-ESM1-2-LR: 0.086
+   EC-Earth3-Veg: 0.091
+   CNRM-ESM2-1: 0.093
+   IPSL-CM6A-LR: 0.101
+   MPI-ESM1-2-HR: 0.114
+   NorESM2-MM: 0.116
+   CESM2: 0.117
+   ACCESS-ESM1-5: 0.119
+   MIROC6: 0.122
+   MIROC-ES2L: 0.125
+   TaiESM1: 0.126
+   NorESM2-LM: 0.143
+   CNRM-CM6-1-HR: 0.145
+   UKESM1-0-LL: 0.147
+   CMCC-ESM2: 0.151
+   EC-Earth3: 0.151
+   CMCC-CM2-SR5: 0.033
+   ACCESS-CM2: 0.084
+   CanESM5-1: 0.086
+
+- key: Ouranos siconcMinExt
+  doi: [in-house performance]
+  metric: &siconcMinExt
+    name: siconcMinExt
+    long_name: Sea Ice concentration biais for climatology of mimimun annual extent of sea ice (models vs ERA5)
+    units: %
+    variables: siconc
+    comment: >
+      First, using monthly data, we find the month with mimimun annual sea ice extent.  
+      Then, we calculate the RMSE at each grid point over the selected the domain (relative to ERA5)
+      for the period from 1981 to 2010 and then we do a spatial average. 
+      All models and ERA5 are linearly interpolated on a regular 1°x1° grid. 
+      -----
+      Periods, domains can be changed in https://pavics.ouranos.ca/selection-de-modeles
+    best: 0.021
+    worst: 0.285
+  type: performance
+  spatial_scope: Artic (40-90 latitude)
+  temporal_scope: Climatology
+  period:
+    reference: 1981-2010
+  plausible_values:
+    min: 0
+    max: 1  
+    source: Ouranos_SAC
+    comment: >
+    
+  data_source: authors
+  data: 
+   CanESM5-1-EBC: 0.021
+   CNRM-CM6-1-HR: 0.054
+   TaiESM1: 0.068
+   EC-Earth3-Veg: 0.069
+   CNRM-CM6-1: 0.077
+   CanESM5-1: 0.077
+   NorESM2-LM: 0.079
+   MPI-ESM1-2-LR: 0.082
+   CNRM-ESM2-1: 0.087
+   EC-Earth3: 0.087
+   MPI-ESM1-2-HR: 0.088
+   MIROC6: 0.092
+   ACCESS-CM2: 0.097
+   ACCESS-ESM1-5: 0.099
+   MIROC-ES2L: 0.107
+   NorESM2-MM: 0.113
+   UKESM1-0-LL: 0.115
+   CESM2: 0.116
+   IPSL-CM6A-LR: 0.133
+   CMCC-ESM2: 0.284
+   CMCC-CM2-SR5: 0.285
+
